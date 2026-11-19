@@ -1,0 +1,41 @@
+MP3 Fuel Log – Assumptions
+
+1. Full Fuel Tank
+Assumption/Decision: The tank is full at the beginning of the trip and after every fill-up.
+Source/Justification: The client description states that the tank is filled completely at each stop.
+Program Change: No additional calculation is needed because each fill-up amount represents fuel used during the previous leg.
+
+2. Odometer Readings
+Assumption/Decision: Miles driven are calculated by subtracting the previous odometer reading from the current reading.
+Source/Justification: The assignment defines each leg using consecutive odometer readings.
+Program Change: The program stores the starting odometer reading and each fill-up reading in an array.
+
+3. Fuel Units
+Assumption/Decision: Fuel amounts entered in liters are converted to US gallons using 1 gallon = 3.785411784 liters.
+Source/Justification: The assignment requires all fuel amounts to be reported in gallons.
+Program Change: The toGallons function converts liters into gallons.
+
+4. Fuel Cost
+Assumption/Decision: The pump's recorded total sale is used as the cost for each leg.
+Source/Justification: The pump total represents the actual amount charged for that fill-up.
+Program Change: The sale amount is stored and used in the cost array.
+
+5. Currency
+Assumption/Decision: Currency amounts are added as entered without converting Canadian dollars to US dollars.
+Source/Justification: The assignment does not provide an exchange rate or require currency conversion.
+Program Change: No currency conversion is performed.
+
+6. Overall MPG
+Assumption/Decision: Overall MPG is calculated using total miles divided by total gallons, rather than averaging individual leg MPG values.
+Source/Justification: The assignment specifies the overall trip calculation.
+Program Change: The program uses the sumOf function to calculate total miles and gallons.
+
+7. Overall Cost Per Mile
+Assumption/Decision: Overall cost per mile is calculated using total fuel cost divided by total miles.
+Source/Justification: This follows the assignment's required overall calculation.
+Program Change: The program calculates total cost per mile using the trip totals.
+
+8. Rounding
+Assumption/Decision: Calculations retain their decimal precision until the final report is printed.
+Source/Justification: Rounding intermediate values could affect the final totals.
+Program Change: printf controls the displayed decimal places.
